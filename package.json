@@ -1,0 +1,12 @@
+{
+  "name": "a-friendly-stranger",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "^4.1.1",
+    "express-hbs": "^0.7.9",
+    "body-parser": "^1.0.2",
+    "twit": "^1.1.14",
+    "instagram-node": "^0.3.0",
+    "async": "^0.8.0"
+  }
+}
