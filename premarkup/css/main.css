@@ -1,0 +1,120 @@
+/*General*/
+body {
+	background-color: #eee;
+	color: #333;
+	font-weight: normal;
+	text-align: center;
+}
+header {
+	position: absolute;
+	height: 100%
+}
+	.full {
+		height: 100%
+	}
+	p {
+		width: 70%;
+		margin: 0 auto;
+	}
+	a {
+		text-decoration: none;
+	}
+	.first {
+		height: 60px;
+	}
+		.first img {
+			display: inline-block;
+			margin: 5% auto 0;
+		}
+	.first,  .fourth {
+		background-color: #333;
+	}
+	.second {
+		background-color: #3bd1ae;
+		color: #fff;
+		height: 15%;
+		min-height: 180px;
+		padding: 10% 0;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+	}
+		.second p {
+			font-size: 24px;
+		}
+		.second p:first-line {
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+	.third {
+		background-color:#eafaf7;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+		padding: 10% 0;
+		color: #888;
+	}
+		.third p:first-child {
+			text-transform: uppercase;
+			font-size: 14px;
+			color: #3bd1ae;
+		}
+		.third p:first-child span {
+			font-size: 24px;
+			font-weight: normal;
+			text-transform: capitalize;
+		}
+		.third p:first-child:after {
+			border-bottom: 1px solid;
+			content: "";
+			display: block;
+			width: 50%;
+			margin: 10% auto;
+		}
+		.third p:nth-child(2) {
+			color: #888;
+			font-size: 16px;
+			margin: 7% auto 0;
+		}
+		.third p:nth-child(3) {
+			color: #ff8c26;
+			font-size: 24px;
+			margin: 1% auto 12%;
+		}
+		.third a:nth-child(4) {
+			width: 60%;
+			height: 33px;
+			color: #fff;
+			font-size: 18px;
+			text-transform: uppercase;
+			background-color: #ffc426;
+			border-bottom: 4px solid #e0970b;
+			padding: 10px 20px;
+			border-radius: 3px;
+		}
+			.third a:nth-child(4):hover {
+				
+			}
+			
+		.third p:nth-child(5) {
+			margin-top: 10%;
+		}
+		.third a img {
+			margin-top: 15%;
+		}
+	.fourth {
+		color: #707070;
+		padding: 5% 0;
+	}
+		.fourth p {
+			display: inline-block;
+			width: auto;
+		}
+		.fourth img {
+			margin: 0 10%;
+		}
+		.fourth p:nth-child(4) {
+			margin-top: 5%;
+			padding-top:5%;
+			border-top: 1px solid #707070;
+		}

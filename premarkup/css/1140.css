@@ -1,0 +1,192 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
+.container16 {
+    margin:0 auto;
+    padding:0;
+    position:relative;
+    width:1140px;
+}
+.row {margin-bottom:20px;}
+.column1, .column2, .column3, .column4, .column5, .column6, .column7, .column8, .column9, .column10, .column11, .column12, .column13, .column14, .column15, .column16 {
+    display:inline;
+    float:left;
+    margin-left:10px;
+    margin-right:10px;
+}
+.alpha {margin-left:0;}
+.omega {margin-right:0;}
+
+.column1  {width:51.25px;}
+.column2  {width:122.5px;}
+.column3  {width:193.75px;}
+.column4  {width:265px;}
+.column5  {width:336.25px;}
+.column6  {width:407.5px;}
+.column7  {width:478.75px;}
+.column8  {width:550px;}
+.column9  {width:621.25px;}
+.column10 {width:692.5px;}
+.column11 {width:763.75px;}
+.column12 {width:835px;}
+.column13 {width:906.25px;}
+.column14 {width:977.5px;}
+.column15 {width:1048.75px;}
+.column16 {width:1120px;}
+.prefix1  {padding-left:71.25px;}
+.prefix2  {padding-left:142.5px;}
+.prefix3  {padding-left:213.75px;}
+.prefix4  {padding-left:285px;}
+.prefix5  {padding-left:356.25px;}
+.prefix6  {padding-left:427.5px;}
+.prefix7  {padding-left:498.75px;}
+.prefix8  {padding-left:570px;}
+.prefix9  {padding-left:641.25px;}
+.prefix10 {padding-left:712.5px;}
+.prefix11 {padding-left:783.75px;}
+.prefix12 {padding-left:855px;}
+.prefix13 {padding-left:926.25px;}
+.prefix14 {padding-left:997.5px;}
+.prefix15 {padding-left:1068.75px;}
+
+@media only screen and (min-width: 960px) and (max-width: 1160px) {
+    .container16 {width:960px;}
+    .column1  {width:40px;}
+    .column2  {width:100px;}
+    .column3  {width:160px;}
+    .column4  {width:220px;}
+    .column5  {width:280px;}
+    .column6  {width:340px;}
+    .column7  {width:400px;}
+    .column8  {width:460px;}
+    .column9  {width:520px;}
+    .column10 {width:580px;}
+    .column11 {width:640px;}
+    .column12 {width:700px;}
+    .column13 {width:760px;}
+    .column14 {width:820px;}
+    .column15 {width:880px;}
+    .column16 {width:940px;}
+    .prefix1  {padding-left:60px;}
+    .prefix2  {padding-left:120px;}
+    .prefix3  {padding-left:180px;}
+    .prefix4  {padding-left:240px;}
+    .prefix5  {padding-left:300px;}
+    .prefix6  {padding-left:360px;}
+    .prefix7  {padding-left:420px;}
+    .prefix8  {padding-left:480px;}
+    .prefix9  {padding-left:540px;}
+    .prefix10 {padding-left:600px;}
+    .prefix11 {padding-left:660px;}
+    .prefix12 {padding-left:720px;}
+    .prefix13 {padding-left:780px;}
+    .prefix14 {padding-left:840px;}
+    .prefix15 {padding-left:900px;}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .container16 {width:768px;}
+    .column1  {width:28px;}
+    .column2  {width:76px;}
+    .column3  {width:124px;}
+    .column4  {width:172px;}
+    .column5  {width:220px;}
+    .column6  {width:268px;}
+    .column7  {width:316px;}
+    .column8  {width:364px;}
+    .column9  {width:412px;}
+    .column10 {width:460px;}
+    .column11 {width:508px;}
+    .column12 {width:556px;}
+    .column13 {width:604px;}
+    .column14 {width:652px;}
+    .column15 {width:700px;}
+    .column16 {width:748px;}
+    .prefix1  {padding-left:48px;}
+    .prefix2  {padding-left:96px;}
+    .prefix3  {padding-left:144px;}
+    .prefix4  {padding-left:192px;}
+    .prefix5  {padding-left:240px;}
+    .prefix6  {padding-left:288px;}
+    .prefix7  {padding-left:336px;}
+    .prefix8  {padding-left:384px;}
+    .prefix9  {padding-left:432px;}
+    .prefix10 {padding-left:480px;}
+    .prefix11 {padding-left:528px;}
+    .prefix12 {padding-left:576px;}
+    .prefix13 {padding-left:624px;}
+    .prefix14 {padding-left:672px;}
+    .prefix15 {padding-left:720px;}
+}
+
+@media only screen and (max-width: 767px) {
+    .container16{width:300px;}
+    .column1,
+    .column2,
+    .column3,
+    .column4,
+    .column5,
+    .column6,
+    .column7,
+    .column8,
+    .column9,
+    .column10,
+    .column11,
+    .column12,
+    .column13,
+    .column14,
+    .column15,
+    .column16 {
+        margin:0 0 20px 0;
+        width:300px;
+    }
+    .prefix1, .prefix2, .prefix3, .prefix4, .prefix5, .prefix6, .prefix7, .prefix8, .prefix9, .prefix10, .prefix11, .prefix12, .prefix13, .prefix14, .prefix15 {padding-left:0;}
+    .row {margin:0;}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .container16 {width:420px;}
+    .column1,
+    .column2,
+    .column3,
+    .column4,
+    .column5,
+    .column6,
+    .column7,
+    .column8,
+    .column9,
+    .column10,
+    .column11,
+    .column12,
+    .column13,
+    .column14,
+    .column15,
+    .column16 {
+        margin:0 0 20px 0;
+        width:420px;
+    }
+    .prefix1, .prefix2, .prefix3, .prefix4, .prefix5, .prefix6, .prefix7, .prefix8, .prefix9, .prefix10, .prefix11, .prefix12, .prefix13, .prefix14, .prefix15 {padding-left:0;}
+    .row {margin:0;}
+}
+.clearfix:before, .clearfix:after,
+.row:before, .row:after,
+.container16:before, .container16:after {
+    content:'.';
+    display:block;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+    width:0;
+}
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+    clear:both;
+    display:block;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+    width:0;
+}
+.row:after, .clearfix:after, .container16:after {clear:both;}
+/* For IE7. Move this to separate file when you notice some problems */
+.row, .clearfix {zoom: 1;}
+img, object, embed {max-width:100%;}
+img {height:auto;}
