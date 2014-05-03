@@ -7,7 +7,8 @@
     "body-parser": "^1.0.2",
     "twit": "^1.1.14",
     "instagram-node": "^0.3.0",
-    "async": "^0.8.0"
+    "async": "^0.8.0",
+    "serve-favicon": "^2.0.0"
   },
   "engines": {
     "node": "0.10.x"

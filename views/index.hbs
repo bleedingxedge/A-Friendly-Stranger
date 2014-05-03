@@ -10,6 +10,8 @@
         Unexpected kindness makes a difference.
       </p> 
     </div>
+    <div class="results">
+    </div>
     <div class="third">
       <p>
         — Has a —
@@ -73,27 +75,46 @@
     </div>
   </div>
 </header>
+<script type="text/template" id="tweetTpl">
+  <div class="tweet">
+    <div class="text"><%- text %></div>
+    <div>By <span class="author"><%= user.name %></span>
+    </div>
+  </div>
+</script>
+<script type="text/template" id="instagramTpl">
+  <div class="instagram">
+    <div class="image"><img src="<%= images.standard_resolution.url %>"></div>
+    <div>By <span class="author"><%= user.username %></span>
+    </div>
+  </div>
+</script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 <script>
-var $searchResults = $('#search-results')
-var $template = _.template('<div class="status"></div>')
-var updateResults = function() {
-  //TODO implementar since para recargar solo lo nuevo
-  console.log('updating')
+(function updateResults() {
+  var tweetTpl = _.template($('#tweetTpl').html())
+  var instagramTpl = _.template($('#instagramTpl').html())
 
-  $.get('/search').done(function (data) {
-    console.log(data)
+  var $results = $('.results')
+  $results.html('Loading…')
+
+  $.get('/search').done(function(data) {
     if (!data.length) {
-      return $searchResults.html('No Results')
+      return $results.html('No Results')
     }
-  }).fail(function(err) {
+
+    var $render = $('<div/>')
+    _.each(data.twitter, function(item) {
+      $render.append(tweetTpl(item))
+    })
+    _.each(data.instagram, function(item) {
+      $render.append(instagramTpl(item))
+    })
+    $results.html($render.html())
+  }).fail(function(err, xhr, message) {
+    $results.html(message)
     console.error(arguments)
   })
-}
-
-$('search-button').on('click', function () {
-  updateResults()
-})
-updateResults()
+}())
 </script>

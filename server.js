@@ -1,10 +1,12 @@
 var express = require('express')
 
-var async = require('async')
+var async      = require('async')
 var bodyParser = require('body-parser')
-var hbs = require('express-hbs')
-var instagram = require('instagram-node').instagram()
-var Twit = require('twit')
+// var favicon = require('serve-favicon')
+var hbs        = require('express-hbs')
+var instagram  = require('instagram-node').instagram()
+var Twit       = require('twit')
+
 
 var searchTerm = 'nofilter'
 
@@ -18,6 +20,7 @@ app.set('views', __dirname + '/views')
 app.set('port', process.env.PORT || 3000)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
+// app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(__dirname + '/public'))
 
 app.route('/')
@@ -49,7 +52,6 @@ app.route('/search')
     }
 
   }, function(err, results) {
-    debugger
     if (err) {
       return res.send(500, err.message)
     }
