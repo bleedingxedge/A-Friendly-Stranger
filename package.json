@@ -9,7 +9,8 @@
     "instagram-node": "^0.3.0",
     "serve-favicon": "^2.0.0",
     "bluebird": "^1.2.4",
-    "redis": "^0.10.1"
+    "redis": "^0.10.1",
+    "tumblr.js": "0.0.4"
   },
   "engines": {
     "node": "0.10.x"
