@@ -9,22 +9,22 @@ var Twit      = require('twit')
 var router = express.Router()
 
 var twitterClient = new Twit({
-  consumer_key: 'rZMGvmwPdkfTiR6Aqjy8RvSo7',
-  consumer_secret: '2nH3BI7HIUxjkNJW8elrBfyB3lyT4kyLEuKFxe90T0CdhQWwMl',
-  access_token: '3367771-I8ccGU4UUTaH5OUV6Q3YlkQoC0Hk7VWMH7Z6CwbUQf',
-  access_token_secret: 'Yj85eg4fuL4aDV8l6cJrYZ0l2iFvAJKw4JQ5gFe2AxiUf',
+  consumer_key: process.env.TW_CONSUMER_KEY,
+  consumer_secret: process.env.TW_CONSUMER_SECRET,
+  access_token: process.env.TW_ACCESS_TOKEN,
+  access_token_secret: process.env.TW_TOKEN_SECRET
 })
 Promise.promisifyAll(twitterClient)
 
 var instagramClient = instagram.instagram()
 instagramClient.use({
-  client_id: '885de22d7010427681562ab71cd81127',
-  client_secret: '0a88e2d362fb4b23b1d5c6c4d93a8a34'
+  client_id: process.env.IG_CLIENT,
+  client_secret: process.env.IG_SECRET
 })
 Promise.promisifyAll(instagramClient)
 
 var tumblrClient = new tumblr.Client({
-  consumer_key: 'AgXEbbB61lQfHK9HfCXnDz0ZoNCN9HRobHHxJpbZ9gIf6RpgEt'
+  consumer_key: process.env.TUMBLR_CONSUMER
 })
 Promise.promisifyAll(tumblrClient)
 
