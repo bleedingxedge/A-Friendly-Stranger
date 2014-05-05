@@ -1,12 +1,12 @@
+/*jshint camelcase:false */
 var express   = require('express')
-var async     = require('async')
-var instagram = require('instagram-node').instagram()
-var Twit      = require('twit')
 var config    = require('../config')
+var instagram = require('instagram-node')
+var Twit      = require('twit')
+var Promise   = require('bluebird')
 
 var router = express.Router()
 
-/*jshint camelcase:false */
 var twitterClient = new Twit({
   consumer_key: 'rZMGvmwPdkfTiR6Aqjy8RvSo7',
   consumer_secret: '2nH3BI7HIUxjkNJW8elrBfyB3lyT4kyLEuKFxe90T0CdhQWwMl',
@@ -14,36 +14,43 @@ var twitterClient = new Twit({
   access_token_secret: 'Yj85eg4fuL4aDV8l6cJrYZ0l2iFvAJKw4JQ5gFe2AxiUf',
 })
 
-instagram.use({
+var instagramClient = instagram.instagram()
+
+instagramClient.use({
   client_id: '885de22d7010427681562ab71cd81127',
   client_secret: '0a88e2d362fb4b23b1d5c6c4d93a8a34'
 })
 
-router.get('/', function(req, res) {
-  async.parallel({
-    twitter: function(next) {
-      twitterClient.get('search/tweets', {q: '#' + config.searchTerm}, next)
-    },
-    instagram: function(next) {
-      instagram.tag_media_recent(config.searchTerm, next)
-    }
+Promise.promisifyAll(twitterClient)
+Promise.promisifyAll(instagramClient)
 
-  }, function(err, results) {
-    if (err) {
-      return res.send(500, err.message)
-    }
+function getTweets() {
+  var searchTerm = '#' + config.searchTerm
+  return twitterClient.getAsync('search/tweets', {q: searchTerm})
+  .then(function (res) {
+    // res -> [data, response]
+    return res[0] && res[0].statuses
+  })
+}
 
-    var twitterData = results.twitter[0].statuses
-    var instagramData = results.instagram[0]
+function getInstagram() {
+  return instagramClient.tag_media_recentAsync(config.searchTerm)
+  .then(function (res) {
+    // res -> [medias, pagination, limit]
+    return res[0]
+  })
+}
 
+router.get('/', function(req, res, next) {
+  Promise.all([getTweets(), getInstagram()])
+  .spread(function (twitterData, instagramData) {
     var statusLength = (twitterData.length || 0) + (instagramData.length || 0)
     res.send({
       twitter: twitterData,
       instagram: instagramData,
       length: statusLength
     })
-  })
+  }).catch(next)
 })
-/*jshint camelcase:true */
 
 module.exports = router
