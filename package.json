@@ -8,7 +8,9 @@
     "twit": "^1.1.14",
     "instagram-node": "^0.3.0",
     "async": "^0.8.0",
-    "serve-favicon": "^2.0.0"
+    "serve-favicon": "^2.0.0",
+    "bluebird": "^1.2.4",
+    "redis": "^0.10.1"
   },
   "engines": {
     "node": "0.10.x"
