@@ -1,5 +1,5 @@
 module.exports = {
   searchTerm: 'nofilter',
-  refresh: 5*60*1000,
+  refresh: 30*1000, // 30 seconds
   items: 30
 }
