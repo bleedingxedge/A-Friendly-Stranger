@@ -75,17 +75,15 @@
     </div>
   </div>
 </header>
-<script type="text/template" id="tweetTpl">
-  <div class="tweet">
-    <div class="text"><%- text %></div>
-    <div>By <span class="author"><%= user.name %></span>
-    </div>
-  </div>
-</script>
-<script type="text/template" id="instagramTpl">
+<script type="text/template" id="mediaTpl">
   <div class="instagram">
-    <div class="image"><img src="<%= images.standard_resolution.url %>"></div>
-    <div>By <span class="author"><%= user.username %></span>
+    <% if(photo) { %>
+    <div class="photo">
+      <a href="<%= url %>"><img src="<%= photo %>"></a>
+    </div>
+    <%}%>
+    <div class="caption"><a href="<%= url %>"><%= caption %></a></div>
+    <div>By <span class="author"><%= user %></span>
     </div>
   </div>
 </script>
@@ -93,8 +91,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 <script>
 (function updateResults() {
-  var tweetTpl = _.template($('#tweetTpl').html())
-  var instagramTpl = _.template($('#instagramTpl').html())
+  var mediaTpl = _.template($('#mediaTpl').html())
 
   var $results = $('.results')
   $results.html('Loading…')
@@ -105,11 +102,8 @@
     }
 
     var $render = $('<div/>')
-    _.each(data.twitter, function(item) {
-      $render.append(tweetTpl(item))
-    })
-    _.each(data.instagram, function(item) {
-      $render.append(instagramTpl(item))
+    _.each(data, function(item) {
+      $render.append(mediaTpl(item))
     })
     $results.html($render.html())
   }).fail(function(err, xhr, message) {

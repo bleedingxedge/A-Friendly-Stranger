@@ -12,7 +12,8 @@
     "redis": "^0.10.1",
     "tumblr.js": "0.0.4",
     "underscore": "^1.6.0",
-    "moment": "^2.6.0"
+    "moment": "^2.6.0",
+    "errorhandler": "^1.0.1"
   },
   "engines": {
     "node": "0.10.x"
