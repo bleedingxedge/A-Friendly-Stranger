@@ -1,3 +1,4 @@
 module.exports = {
-  searchTerm: 'nofilter'
+  searchTerm: 'nofilter',
+  refresh: 5*60*1000
 }

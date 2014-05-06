@@ -21,7 +21,14 @@ app.get('/', function(req, res) {
   res.render('index')
 })
 
-app.use('/search', require('./routers/searchRouter'))
+var getMedia = require('./lib/media')
+app.get('/search', function() {
+  getMedia().then(function(results){
+    results.length = results.twitter.length + results.instagram.length +
+      results.tumblr.length
+    res.send(results)
+  }).catch(next)
+})
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
