@@ -6,14 +6,13 @@
     "express-hbs": "^0.7.9",
     "body-parser": "^1.0.2",
     "twit": "^1.1.14",
-    "instagram-node": "^0.3.0",
     "serve-favicon": "^2.0.0",
     "bluebird": "^1.2.4",
     "redis": "^0.10.1",
-    "tumblr.js": "0.0.4",
     "underscore": "^1.6.0",
     "moment": "^2.6.0",
-    "errorhandler": "^1.0.1"
+    "errorhandler": "^1.0.1",
+    "request": "^2.34.0"
   },
   "engines": {
     "node": "0.10.x"
