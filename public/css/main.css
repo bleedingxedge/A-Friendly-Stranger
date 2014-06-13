@@ -49,11 +49,13 @@ header {
 		box-sizing: border-box;         /* Opera/IE 8+ */
 		padding: 5% 0;
 		color: #888;
+		height: 60%;
 	}
 		.third p:first-child {
 			text-transform: uppercase;
 			font-size: 14px;
 			color: #3bd1ae;
+			margin-top: 15%
 		}
 		.third p:first-child span {
 			font-size: 24px;
@@ -65,7 +67,7 @@ header {
 			content: "";
 			display: block;
 			width: 50%;
-			margin: 10% auto;
+			margin: 15% auto;
 		}
 		.third p:nth-child(2) {
 			color: #888;
@@ -89,18 +91,20 @@ header {
 			border-radius: 3px;
 		}
 			.third a:nth-child(4):hover {
-
+				background-color: #fbb111;
+				border-bottom: 4px solid #be7706;
 			}
 
 		.third p:nth-child(5) {
-			margin-top: 10%;
+			margin-top: 20%;
 		}
 		.third a img {
-			margin-top: 3%;
+			margin-top: 10%;
 		}
 	.fourth {
 		color: #707070;
 		padding: 5% 0;
+		height: 20%;
 	}
 		.fourth p {
 			display: inline-block;
