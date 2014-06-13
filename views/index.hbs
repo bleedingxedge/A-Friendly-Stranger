@@ -29,7 +29,7 @@
         #AFriendlyStranger
       </p>
 
-      <a href="#">
+      <a href="/shareme.pdf">
         Download a Card
       </a>
 
@@ -78,14 +78,12 @@
 <script type="text/template" id="mediaTpl">
   <div class="media column5 <% if(!obj.photo){%> nophoto<%}%>">
     <% if(obj.photo) { %>
-    <%= obj.photo %>
-    <%= typeof obj.photo %>
     <div class="photo">
       <a href="<%= url %>"><img src="<%= obj.photo %>"></a>
     </div>
     <%}%>
     <div class="caption"><a href="<%= url %>"><%= caption %></a></div>
-    <div>By <span class="author"><%= user %></span>
+    <div class="attribution">By <span class="author"><%= user %></span>
     </div>
   </div>
 </script>
