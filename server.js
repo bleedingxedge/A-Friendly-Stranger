@@ -14,6 +14,7 @@ app.set('views', __dirname + '/views')
 app.set('port', process.env.PORT || 3000)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
+app.use(require('morgan')('dev'))
 // app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(express.static(__dirname + '/public'))
 
