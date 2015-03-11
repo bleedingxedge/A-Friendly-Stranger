@@ -1,5 +1,5 @@
 # A-Friendly-Stranger
 
-Diseño & Idea by Veronica Garcia @restatemedia
-Javascript by @jeduan
-Markup by @bleedingxedge
+*Design & Idea by Veronica Garcia @restatemedia https://github.com/restatemedia
+*Javascript by @jeduan https://github.com/jeduan
+*Markup by @bleedingxedge https://github.com/bleedingxedge
